@@ -15,6 +15,9 @@ export const CategoryList: React.FC<CategoryListProps> = ({ categories, selected
         style={{
           backgroundColor: selectedCategory === category ? '#8f369b' : '',
           color: selectedCategory === category ? 'white' : '',
+          padding: '0.5em',
+          margin: '0.5em',
+          borderRadius: '0.5em',
         }}
         onClick={() => onSelectCategory(category)}
       >
