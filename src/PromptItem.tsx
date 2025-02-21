@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Prompt } from './types';
+import 'prismjs/themes/prism-tomorrow.css';
+import CodeBlock from './CodeBlock';
 
 interface PromptItemProps {
   prompt: Prompt;
@@ -53,7 +55,7 @@ export const PromptItem: React.FC<PromptItemProps> = ({ prompt, onDelete, onUpda
             </>
           ) : (
             <>
-              <div>{prompt.text}</div>
+              <CodeBlock code={prompt.text} language="javascript" />
               <button className="outline-button outline-primary shadow" onClick={() => setIsEditing(true)}>Edit</button>
             </>
           )}
